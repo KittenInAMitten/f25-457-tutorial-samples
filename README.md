@@ -1,2 +1,2 @@
-# Checkout a branch!
-If you're seeing this, make sure to move to a different branch using: `git checkout [BRANCH-NAME]` depending on the tutorial sample you want.
+# Collection of Weekly Sample Code for Tutorials
+Use `git clone https://github.com/KittenInAMitten/f25-457-tutorial-samples.git`
