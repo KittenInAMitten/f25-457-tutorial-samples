@@ -10,6 +10,9 @@
  *  3. Type in `./hello-world`
  *  4. Confirm the output says "hello world" or whatever you chose to output in the terminal
  * 
+ * Random tip:
+ *  "\n" in a string starts a new line! :D
+ * 
  * @return int 
  */
 int main(){
