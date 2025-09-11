@@ -1,15 +1,12 @@
 #include <stdio.h>
 
 /**
- * @brief This program is super simple and will be used to show you how to compile your very first C program!
+ * @brief A simple hello-world program. To run, use the command:
+ *  'gcc -O2 -Wall hello-world.c -o hello-world', then:
+ *  './hello-world'
  * 
- * Ensure you are logged into/SSH'd into the cslinux servers/computers.
- * 
- *  1. Copy this function onto a file in linux.
- *  2. Type into the terminal: `gcc -O2 -Wall hello-world.c -o hello-world`
- *  3. Type in `./hello-world`
- * 
- * @return int 
+ * O2 denotes the optimization level
+ * Wall tells compiler to give any and all warnings and errors on compiling.
  */
 int main(int argc, char* argv[]){
 
