@@ -1,0 +1,10 @@
+This text file just has this sentence BUT there are more lines below that won't be read by ioExercise.c without some work
+Super secret second line, there's actually more lines below, some newline, some with a single character! If you didn't print those then get a loop going!
+
+
+
+
+0
+
+EOF
+Just kidding

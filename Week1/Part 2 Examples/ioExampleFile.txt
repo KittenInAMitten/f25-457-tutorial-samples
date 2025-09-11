@@ -1,0 +1,2 @@
+This text file just has this sentence BUT there is a second line below that won't be read by ioExercise.c without some work
+Super secret second line, if you printed everything then you're good! :D

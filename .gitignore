@@ -53,3 +53,6 @@ dkms.conf
 
 # debug information files
 *.dwo
+Week1/Part 2 Examples/memoryAllocation
+Week1/Part 2 Examples/pointers
+Week1/Part 2 Examples/ioExercise

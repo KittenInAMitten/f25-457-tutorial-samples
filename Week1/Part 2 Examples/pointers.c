@@ -38,36 +38,41 @@ void ptrIntro() {
 }
 
 // The parameters with *(argument) act as declaring a pointer as well.
-void ptrsAndFuncsHelper(int *a_ptr, int *b_ptr) {
+void swap(int *a_ptr, int *b_ptr) {
+    // register tells the compiler to put this variable in a register for faster access in certain cases.
+    register int temp;
+
     // Using '*', we can manipulate the variable via the pointer
-    *a_ptr = *a_ptr + *b_ptr;
-    *b_ptr = *a_ptr - *b_ptr;
+    temp = *a_ptr;
+    *a_ptr = *b_ptr;
+    *b_ptr = temp;
 }
 
 void ptrsAndFuncs() {
     //When passing arguments into afunction expecting pointers, we can use '&' to do so.
     int a = 10;
     int b = 5;
-    printf("Before function - 'a':      %d\n", a);
-    printf("Before function - 'b':      %d\n", b);
+    printf("Before swap - 'a':          %d\n", a);
+    printf("Before swap - 'b':          %d\n", b);
 
-    printf("---Running func where (a = a + b) then (b = a - b)\n");
+    printf("---Running swap func where a and b swap values\n");
 
     // Here we pass in the ADDRESSES of a and b
-    ptrsAndFuncsHelper(&a, &b);
+    swap(&a, &b);
 
     printf("After function - 'a':       %d\n", a);
     printf("After function - 'b':       %d\n", b);
 
-    // Pointers can also point at functions!
-    void (*ptrFunc)(int *a_ptr, int *b_ptr) = ptrsAndFuncsHelper;
+    // Pointers can also point at functions! You can also ignore parameter names
+    void (*ptrFunc)(int*, int*) = &swap;
+
 
     // Here we do the same as using ptrsAndFuncsHelper but with our new ptr.
     ptrFunc(&a, &b);
     
     printf("---Running func above but via pointer!\n");
     printf("After ptr function - 'a':   %d\n", a);
-    printf("After ptr function - 'b':   %d\n", b);
+    printf("After ptr function - 'b':   %d\n\n", b);
 };
 
 void ptrsAndArrays() {
