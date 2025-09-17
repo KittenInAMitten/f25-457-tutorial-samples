@@ -54,7 +54,7 @@ void sharedMem () {
  */
 void shmRaceConditions() {
     // Function copied from sharedMem()
-    int shmid = shmget(IPC_PRIVATE, 2, 0666 | IPC_CREAT);
+    int shmid = shmget(IPC_PRIVATE, 2 * sizeof(int), 0666 | IPC_CREAT);
     // Notice num was created before fork.
     int *num = (int*) shmat(shmid, NULL, 0);
 
